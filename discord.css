@@ -1,0 +1,141 @@
+/*revert font*/
+@import url(https://cdn.statically.io/gh/Overimagine1/old-discord-font/main/source.min.css);
+
+/*top bar buttons*/
+div[aria-label="Help"],
+div[aria-label="Threads"],
+div[aria-label="Notification Settings"][role="button"]{
+    display: none;
+}
+
+/*text box input buttons*/
+button[aria-label="Send a gift"],
+button[aria-label="Open GIF picker"],
+button[aria-label="Open sticker picker"]{
+    display: none;
+}
+
+/*settings buttons under Payment Settings*/
+div[aria-label="Connections"] + div + div[class*="separator"],
+div[class*="header"]:has(+div[aria-label="Nitro"]),
+div[aria-label="Nitro"],
+div[aria-label="Nitro"] + div[class*="item"],
+div[aria-label="Subscriptions"],
+div[aria-label="Gift Inventory"],
+div[aria-label="Gift Inventory"] + div[class*="item"]{
+    display: none;
+}
+
+/*server boost badges*/
+div[aria-label="Level 1"],
+div[aria-label="Level 2"],
+div[aria-label="Level 3"]{
+    display: none;
+}
+
+/*server boost bar*/
+div[aria-label="Buy Boosts to help unlock Level 1 perks!"],
+div[aria-label="Buy Boosts to help unlock Level 2 perks!"],
+div[aria-label="Buy Boosts to help unlock Level 3 perks!"],
+div[aria-label="This server has unlocked all Boosting perks!"]{
+    display: none;
+}
+
+/*server menu "Server Boost" option*/
+#guild-header-popout-premium-subscribe,
+div:has(#guild-header-popout-premium-subscribe) + div[class*="separator"]{
+    display: none;
+}
+
+/*tabs in direct messages*/
+a[data-list-item-id*="__library"],
+a[data-list-item-id*="__nitro"]{
+    display: none;
+}
+
+/*server profile settings Nitro upsell*/
+div[class*="upsellContainer"],
+div[class*="upsellOverlay"]{
+    display: none;
+}
+div[class*="customizationSection"]:has(+div[class*="upsellOverlay"]){
+    border-bottom: 0px;
+}
+
+/*user profile settings Nitro try out*/
+div[class*="customizationSection"]:has(div[class*="premiumFeatureBorder"]),
+div[class*="premiumFeatureBorder"]{
+    display: none;
+}
+
+/*avatar decoration*/
+img[class*="avatarDecoration"], /*in the chat*/
+svg[class*="avatarDecoration"]{ /*in the profile*/
+    display:none;
+}
+/*user popout banner*/
+div[class*="bannerPremium"]{
+    display:none;
+}
+/*user popout popup upsell about banner*/
+div:has(div[class*="banner"]):has(+ svg > foreignObject > div[class*="bannerPremium"]){
+    display:none;
+}
+
+/*super reactions animations*/
+.emoji{
+    opacity:100;
+}
+div[class*="effectsWrapper"]{
+    display:none;
+}
+div[class*="reaction"]{
+    animation:none !important;
+}
+/*reactions tabs (hiding the super reactions tab*/
+/*and not leaving reactions on its own)*/
+div[aria-label="Reaction Picker Categories"]{
+    display:none;
+}
+/*remove remaining blank space without messing with*/
+/*the regular non-reaction emoji picker*/
+nav:has(div[aria-label="Reaction Picker Categories"]) + #emoji-picker-tab-panel{
+    margin-top:-30px;
+}
+/*super reaction option when right-clicking message*/
+div[id*="message-add-reaction"][class*="colorPremiumGradient"],
+/*and when clicking on the 3-dot menu*/
+div[id*="message-actions-add-reaction"][class*="colorPremiumGradient"],
+/*and when hovering message*/
+div[aria-label="Add Super Reaction"]{
+    display:none;
+}
+/*upsell in tooltip when hovering super reaction*/
+div[class*="burstReactionTooltipPrompt"]:has(button[class*="burstReactionTooltipUpsell"]){
+    display:none;
+}
+/*remove space left by upsell, might hit more than expected, had to remove a :has for some reason*/
+div[class*="burstReactionTooltipSpacer"]:has(+div[class*="burstReactionTooltipPrompt"]){
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+}
+
+/*remove disabled emojis in emoji picker (animated, different server)*/
+/* disabled because empty rows look bad*/
+/*li:has(button[class*="emojiItemDisabled"]){
+    display:none;
+}*/
+/*remove rows that only have disabled emojis (attempt to fix issue above)*/
+/* disabled because list looks too broken, loading too few servers at a time*/
+/*ul[class*="emojiListRow"]:not(:has(button:not([class*="emojiItemDisabled"])))*/
+/*remove nitro message when clicking a disabled emote*/
+div[class*="premiumPromoDescription"],
+button:has(div[class*="premiumSubscribeButton"]){
+    display:none;
+}
+
+/*thread suggestion bar that appears once you reply back and forth enough times*/
+div[class*="threadSuggestionBar"]{
+    display:none;
+}
