@@ -83,13 +83,14 @@ div:has(div[class*="banner"]):has(+ svg > foreignObject > div[class*="bannerPrem
 }
 
 /*super reactions animations*/
-.emoji{
+.emoji{ /*make sure original emote doesn't disappear as animated version is supposed to replace it*/
     opacity:100;
 }
-div[class*="effectsWrapper"]{
+div[class*="effectsWrapper"], /*hide big animation*/
+div[class*="burstGlow"]{ /*hide glow around reaction*/
     display:none;
 }
-div[class*="reaction"]{
+div[class*="reaction"]{ /*stop reaction from shaking*/
     animation:none !important;
 }
 /*reactions tabs (hiding the super reactions tab*/
