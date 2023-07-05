@@ -27,6 +27,7 @@ div[aria-label="Gift Inventory"] + div[class*="item"]{
 }
 
 /*server boost badges*/
+div[aria-label="No Level"],
 div[aria-label="Level 1"],
 div[aria-label="Level 2"],
 div[aria-label="Level 3"]{
