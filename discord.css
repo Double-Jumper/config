@@ -141,3 +141,9 @@ button:has(div[class*="premiumSubscribeButton"]){
 div[class*="threadSuggestionBar"]{
     display:none;
 }
+
+/*adds the original link in red after hyperlinks*/
+a[title*="("]::after{
+    color:red;
+    content: " (" attr(href) ") ";
+}
