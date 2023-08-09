@@ -143,7 +143,9 @@ div[class*="threadSuggestionBar"]{
 }
 
 /*adds the original link in red after hyperlinks*/
-a[title*="("]::after{
+/* but only activates if the text of the link starts with https:// so that*/
+/* it doesn't activate on all non-markdown links*/
+a[title*="("]:not([title^="https://"])::after{
     color:red;
     content: " (" attr(href) ") ";
 }
