@@ -50,7 +50,8 @@ div:has(#guild-header-popout-premium-subscribe) + div[class*="separator"]{
 
 /*tabs in direct messages*/
 a[data-list-item-id*="__library"],
-a[data-list-item-id*="__nitro"]{
+a[data-list-item-id*="__nitro"],
+a[data-list-item-id*="__shop"]{
     display: none;
 }
 
