@@ -67,7 +67,8 @@ div[class*="customizationSection"]:has(+div[class*="upsellOverlay"]){
 /*user profile settings Nitro try out*/
 div[class*="customizationSection"]:has(div[class*="premiumFeatureBorder"]),
 div[class*="premiumFeatureBorder"],
-div[class*="premiumFeatureBanner"]{
+div[class*="premiumFeatureBanner"],
+div[class*="selectionGroup"]:has(div>div>div>div>div>div[aria-label="Exclusive to Nitro"]){
     display: none;
 }
 
