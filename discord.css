@@ -35,10 +35,12 @@ div[aria-label="Level 3"]{
 }
 
 /*server boost bar*/
-div[aria-label="Buy Boosts to help unlock Level 1 perks!"],
+/*(keeping outdated check below in case it changes again)*/
+/*div[aria-label="Buy Boosts to help unlock Level 1 perks!"],
 div[aria-label="Buy Boosts to help unlock Level 2 perks!"],
 div[aria-label="Buy Boosts to help unlock Level 3 perks!"],
-div[aria-label="This server has unlocked all Boosting perks!"]{
+div[aria-label="This server has unlocked all Boosting perks!"]*/
+div[data-list-item-id*="channels___boosts"]{
     display: none;
 }
 
@@ -68,7 +70,9 @@ div[class*="customizationSection"]:has(+div[class*="upsellOverlay"]){
 div[class*="customizationSection"]:has(div[class*="premiumFeatureBorder"]),
 div[class*="premiumFeatureBorder"],
 div[class*="premiumFeatureBanner"],
-div[class*="selectionGroup"]:has(div>div>div>div>div>div[aria-label="Exclusive to Nitro"]){
+div[class*="selectionGroup"]:has(div>div>div>div>div>div[aria-label="Exclusive to Nitro"]),
+/*"Give your profile a fresh look" with button to go to shop*/
+div[id="profile-customization-tab"] div[class*="container"]:has(div[class*="artContainer"]){
     display: none;
 }
 
