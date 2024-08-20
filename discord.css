@@ -89,6 +89,10 @@ div[class*="bannerPremium"]{
 div:has(div[class*="banner"]):has(+ svg > foreignObject > div[class*="bannerPremium"]){
     display:none;
 }
+/*user popout animation overlay*/
+div[class*="profileEffects"]{
+    display: none;
+}
 
 /*super reactions animations*/
 .emoji{ /*make sure original emote doesn't disappear as animated version is supposed to replace it*/
