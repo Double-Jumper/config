@@ -82,7 +82,12 @@ svg[class*="avatarDecoration"]{ /*in the profile*/
     display:none;
 }
 /*user popout banner*/
-div[class*="bannerPremium"]{
+/*The rule below might be deprecated, now being part of the same banner class as the free solid colors one,
+so it's being replaced by the more specific rule below that. Keeping it commented just in case this was mistaken*/
+/*div[class*="bannerPremium"]{
+    display:none;
+}*/
+div[class*="banner"][style*=".gif"], div[class*="banner"][style*=".png"], div[class*="banner"][style*=".jpg"]{
     display:none;
 }
 /*user popout popup upsell about banner*/
