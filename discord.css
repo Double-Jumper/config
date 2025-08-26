@@ -3,7 +3,6 @@
 
 /*top bar buttons*/
 div[aria-label="Help"],
-div[aria-label="Threads"],
 div[aria-label="Notification Settings"][role="button"]{
     display: none;
 }
