@@ -8,9 +8,9 @@ div[aria-label="Notification Settings"][role="button"]{
 }
 
 /*text box input buttons*/
-button[aria-label="Send a gift"],
-button[aria-label="Open GIF picker"],
-button[aria-label="Open sticker picker"]{
+div[class*="button"][aria-label="Send a gift"],
+div[class*="button"][aria-label="Open GIF picker"],
+div[class*="button"][aria-label="Open sticker picker"]{
     display: none;
 }
 
